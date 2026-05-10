@@ -7,6 +7,7 @@
     <title>Timed Typing Test App</title>
     <script src="script.js" async></script>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900,900i" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,12 +16,17 @@
         <h1>Test Your Typing Speed</h1>
     </header>
     <main class="main">
-        <article class="intro">
-            <p>This is a typing test. Your goal is to duplicate the provided text, EXACTLY, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Good Luck!</p>
-        </article><!-- .intro -->
         <section class="test-area">
+            <div id="help-toggle">
+                <span>Help <i class="fa-solid fa-circle-question"></i></span>
+            </div>
+            
+            <div class="intro" id="intro-content">
+                <p>This is a typing test. Your goal is to duplicate the provided text, EXACTLY, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Good Luck!</p>
+            </div><!-- .intro -->
+
             <div id="origin-text">
-                <p>The text to test.</p>
+                <p>Typing fast and accurately is a valuable skill in today's digital world.</p>
             </div><!-- #origin-text -->
 
             <div class="test-wrapper">
@@ -32,8 +38,24 @@
                     <div class="timer">00:00:00</div>
                 </section>
 
-                <button id="reset">Start over</button>
+                <div class="performance-metrics">
+                    <span id="wpm">WPM: 0</span>
+                    <span id="error-count">Errors: 0</span>
+                </div>
             </div><!-- .meta -->
+            
+            <div class="reset-container">
+                <button id="reset">Start over</button>
+            </div>
+            
+            <section class="leaderboard">
+                <h3><i class="fa-solid fa-crown" style="margin-right: 8px;"></i>Top 3 Scores</h3>
+                <ol id="top-scores" class="score-list">
+                    <li class="empty-score">--:--:--</li>
+                    <li class="empty-score">--:--:--</li>
+                    <li class="empty-score">--:--:--</li>
+                </ol>
+            </section>
         </section><!-- .test-area -->
     </main>
 

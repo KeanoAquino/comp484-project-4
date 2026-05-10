@@ -107,11 +107,13 @@ Layout
 body {
     margin: 0;
     padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 .masthead {
     padding: 1em 2em;
-    background-color: #0D1B2E;
+    background-color: #1f1f1f;
     color: white;
 }
 
@@ -143,9 +145,11 @@ body {
 }
 
 #origin-text {
-    margin: 1em 0;
+    margin-top: 0;
+    margin-bottom: 1em;
     padding: 1em 1em 0;
-    background-color: #ededed;
+    background-color: #1e1e1e;
+    border-radius: 10px;
 }
 
 #origin-text p {
@@ -159,30 +163,142 @@ body {
 
 .test-wrapper textarea {
     flex: 1;
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+    border: none;
+    padding: 1em;
+    font-size: 1rem;
+    resize: none;
+}
+.test-wrapper textarea:focus {
+    outline: none;
 }
 
 .meta {
-    margin-top: 1em;
+    margin-top: 0;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-}
+    flex-wrap: wrap;    align-items: center;}
 
 .timer {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bold;
 }
 
 #reset {
-    padding: .5em 1em;
+    padding: 0.8em 2em;
     font-size: 1.2em;
     font-weight: bold;
-    color: #E95D0F;
-    background: white ;
-    border: 10px solid #E95D0F;
+    color: white;
+    background-color: #E95D0F;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #reset:hover {
+    background-color: #c74d0c;
+}
+
+#help-toggle {
+    text-align: right;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+#help-toggle span {
+    display: inline-block;
+    cursor: pointer;
     color: white;
     background-color: #E95D0F;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
 }
+
+#help-toggle span:hover {
+    background-color: #c74d0c;
+}
+
+#intro-content {
+    display: none;
+    background: #E95D0F;
+    color: white;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+}
+
+#intro-content p {
+    margin: 0;
+}
+
+.performance-metrics {
+    text-align: right;
+    font-weight: bold;
+    color: #e0e0e0;
+    font-size: 1.2em;
+}
+
+#wpm {
+    margin-right: 20px;
+}
+
+.reset-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.leaderboard {
+    margin-top: 2em;
+    padding: 1em 0;
+    border-top: 1px solid #333;
+}
+
+.leaderboard h3 {
+    margin-top: 0;
+    text-align: left;
+    color: #888;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.score-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.score-list li {
+    margin-bottom: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid #222;
+    font-weight: normal;
+    display: flex;
+    transition: color 0.2s ease;
+    color: #888;
+}
+
+.score-list li:last-child {
+    border-bottom: none;
+}
+
+.score-list li:hover {
+    color: #fff;
+}
+
+.score-list .empty-score {
+    justify-content: flex-start;
+}
+
+.score-list .filled-score {
+    justify-content: space-between;
+}
+
+.score-time { color: inherit; }
+.score-wpm { color: inherit; }
+.score-err { color: inherit; }
